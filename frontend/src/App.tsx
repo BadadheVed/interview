@@ -19,7 +19,7 @@ function App() {
   const handleAdd = async () => {
     const newId = nextId.toString();
 
-    const response = await fetch("http://localhost:3000/add", {
+    const response = await fetch("https://interview-tsh7.onrender.com/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,9 +42,12 @@ function App() {
   };
 
   const handleChangeStatus = async () => {
-    const response = await fetch(`http://localhost:3000/change/${id}`, {
-      method: "PATCH",
-    });
+    const response = await fetch(
+      `https://interview-tsh7.onrender.com/change/${id}`,
+      {
+        method: "PATCH",
+      }
+    );
 
     const data = await response.json();
     alert(data.message);
@@ -52,7 +55,7 @@ function App() {
   };
 
   const handleGetAll = async () => {
-    const response = await fetch("http://localhost:3000/all");
+    const response = await fetch("https://interview-tsh7.onrender.com/all");
     const data = await response.json();
     setAnnouncements(data.announcements);
   };
