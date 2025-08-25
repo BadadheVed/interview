@@ -89,8 +89,11 @@ function App() {
       <ul>
         {announcements.map((ann) => (
           <li key={ann.id}>
-            <strong>{ann.title}</strong> - {ann.description || "No description"}{" "}
-            - {ann.status} - {new Date(ann.createdAt).toLocaleString()}
+            <strong>
+              {ann.id} -{ann.title}
+            </strong>{" "}
+            - {ann.description || "No description"} - {ann.status} -{" "}
+            {new Date(ann.createdAt).toLocaleString()}
           </li>
         ))}
       </ul>
