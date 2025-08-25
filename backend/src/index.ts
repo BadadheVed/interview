@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://interview-gamma-six.vercel.app"],
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true, // if you need cookies/auth
   })
